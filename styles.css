@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Krona+One');
+ 
+ :root {
+     --background: black;
+     --grey: grey;
+     --white: white;
+     --red: red;
+
+     --font: 'Lato', sans-serif;
+ }
+ 
+ * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+ }
+
+ body {
+     background: var(--background);
+     background: url('./city.jpg');
+     background-size: cover;
+     width: 100vw;
+     height: 100vh;
+     display: grid;
+     grid-template-columns: minmax(100px, 2fr) 3fr minmax(100px, 2fr);
+     grid-template-rows: 1fr 4fr 1fr;  
+     grid-gap: 20px;
+ }
+
+ .sprites {
+    width: 100%;
+    height: 10px;
+    margin-top: 10px;
+    /* transform: rotate(-8deg); */
+ }
+
+ .white {
+     background: var(--white);
+ }
+
+ .red {
+     background: var(--red);
+ }
+
+ .cover {
+     background: var(--background);
+     grid-column: 1 / -1;
+     grid-row: 1 / -1;
+     opacity: .95;
+ }
+
+ .note {
+     /* background: var(--grey); */
+     width: 70px;
+     height: 80px;
+     grid-column: 3;
+     grid-row: 3;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border-top: 5px solid var(--white);
+     border-bottom: 5px solid var(--red);
+     z-index: 2;
+ }
+
+ .note-year {
+    font-weight: 600;
+    font-family: var(--font);
+    font-size: 29px;
+ }
+
+ .container {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+ }
+
+ .poland-map {
+     transform: rotate(-8deg);
+     /* grid-column: 2;
+     grid-row: 2;
+     width: 100%;
+     height: 100%; */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     /* background-size: cover; */
+ }
+
+.northern-poland {
+    background: var(--white);
+    width: 100%;
+    height: 250px;
+    opacity: .5;
+}
+
+.southern-poland {
+    background: var(--red);
+    width: 100%;
+    height: 250px;
+    opacity: .5;
+}
